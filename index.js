@@ -17,12 +17,14 @@ module.exports = function(req, res){
       var type = types[i]
         , msgs = messages[type];
       if (msgs) {
-        buf.push('  <ul class="alert alert-' + type + '">');
+        buf.push('  <div class="alert alert-' + type + '">');
+        buf.push('    <ul>');
         for (var j = 0, l = msgs.length; j < l; ++j) {
           var msg = msgs[j];
-          buf.push('    <li>' + msg + '</li>');
+          buf.push('      <li>' + msg + '</li>');
         }
-        buf.push('  </ul>');
+        buf.push('    </ul>');
+        buf.push('  </div>');
       }
     }
     buf.push('</div>');
