@@ -12,12 +12,12 @@ module.exports = function(req, res){
       , types = Object.keys(messages)
       , len = types.length;
     if (!len) return '';
-    buf.push('<div id="messages" class="alert">');
+    buf.push('<div id="messages">');
     for (var i = 0; i < len; ++i) {
       var type = types[i]
         , msgs = messages[type];
       if (msgs) {
-        buf.push('  <ul class="alert-' + type + '">');
+        buf.push('  <ul class="alert alert-' + type + '">');
         for (var j = 0, l = msgs.length; j < l; ++j) {
           var msg = msgs[j];
           buf.push('    <li>' + msg + '</li>');
