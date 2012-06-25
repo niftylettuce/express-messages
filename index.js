@@ -17,7 +17,7 @@ module.exports = function(req, res){
       var type = types[i]
         , msgs = messages[type];
       if (msgs) {
-        buf.push('  <div class="alert alert-' + type + '">');
+        buf.push('  <div class="alert alert-' + type + ' fade in">');
         buf.push('    <ul>');
         for (var j = 0, l = msgs.length; j < l; ++j) {
           var msg = msgs[j];
